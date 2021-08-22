@@ -1,3 +1,18 @@
+![图片 5](https://user-images.githubusercontent.com/39546319/130344981-990da0d3-0452-4bb4-8612-2c323b4b2b94.png)
+![图片 22](https://user-images.githubusercontent.com/39546319/130344982-832c08bc-8e00-43d5-99cc-9f3665cb45ae.png)
+![图片 29](https://user-images.githubusercontent.com/39546319/130344983-5e614225-5efc-4bc0-8083-52937878001b.png)
+![图片 31](https://user-images.githubusercontent.com/39546319/130344984-3ffa4676-840f-457b-8a62-6b10e658686e.png)
+![图片 33](https://user-images.githubusercontent.com/39546319/130344986-d287d130-3a7b-4736-97a3-c3341be84b22.png)
+![图片 3](https://user-images.githubusercontent.com/39546319/130344991-e6cd1780-d3fe-478f-b5ff-b8c56aa4b54a.png)
+![图片 7](https://user-images.githubusercontent.com/39546319/130344993-83c7640c-7d73-44d8-97a6-f24442ffade6.png)
+![图片 10](https://user-images.githubusercontent.com/39546319/130344994-a22746a8-64a7-4160-8e78-a1ae317e4d06.png)
+![图片 16](https://user-images.githubusercontent.com/39546319/130344995-cfe505fe-cba4-464c-b64b-daef60fc98cf.png)
+![图片 37](https://user-images.githubusercontent.com/39546319/130344996-d62ed95c-4eb5-4c4c-b4e4-d03af198304c.png)
+![图片 6](https://user-images.githubusercontent.com/39546319/130345002-0beb5028-7521-435d-9500-37a69004d79c.png)
+![图片 8](https://user-images.githubusercontent.com/39546319/130345004-c78f35c3-5d38-477f-81c2-3c5bad31cd2e.png)
+![图片 13](https://user-images.githubusercontent.com/39546319/130345007-31ad383e-efa2-4089-8652-11e523ba2f07.png)
+![图片 24](https://user-images.githubusercontent.com/39546319/130345008-923339b6-261a-403a-b8e3-788b2ec8bf17.png)
+![图片 31](https://user-images.githubusercontent.com/39546319/130345009-af91fa30-6958-4863-ad64-1517a8dfece3.png)
 项目使用技术与环境配置：
 项目后端使用java经典框架ssm（spring，sturts2， mybatis）框架所开发，并采用maven所为项目管理工具，开发工具为Intellij IDEA 2018.2.3 x64，jdk版本为1.8.0_77，tomcat版本为9.0。
 数据库使用mysql数据库、版本为8.0，
