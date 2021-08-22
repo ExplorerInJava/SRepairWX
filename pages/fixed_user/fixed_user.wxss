@@ -1,0 +1,8 @@
+page {
+  background: #fff;
+}
+
+
+#text_word{
+  padding-left: 10rpx;
+}

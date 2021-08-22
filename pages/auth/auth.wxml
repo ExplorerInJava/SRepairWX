@@ -1,0 +1,11 @@
+<view class='UCenter-bg'>
+  <image src='/images/logo.png' class='png' mode='widthFix'></image>
+  <view class='text-xl'>SERepair
+  </view>
+  <view class='margin-top-sm'>
+    <text>By:白月影子</text>
+  </view>
+</view>
+<view class='padding-xl'>
+  <button class='cu-btn  bg-green shadow lg block' open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">微信授权</button>
+</view>

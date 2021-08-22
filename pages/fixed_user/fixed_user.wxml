@@ -1,0 +1,31 @@
+<view class="cu-timeline" wx:for="{{orderList}}" wx:key>
+
+  <view class='cu-item text-green'>
+    <view class="bg-gradual-green content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">Date</view>
+        <view class="cu-tag line-white">{{item.start_date}}</view>
+      </view>
+      <view class='margin-top-sm text-content'>
+        <view>
+          <text class='icon-locationfill text-white'></text>
+          <text class='text-white' id='text_word'>{{item.address}}</text>
+        </view>
+        <view>
+          <text class='icon-homefill text-white'></text>
+          <text class='text-white' id='text_word'>{{item.detailAddress}}</text>
+        </view>
+        <view>
+          <text class='icon-commentfill text-white'></text>
+          <text class='text-white' id='text_word'>描述：{{item.detail}}</text>
+        </view>
+        <view>
+          <text class='icon-myfill text-white'></text>
+          <text class='text-white' id='text_word'>申请人：{{item.user.nickName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

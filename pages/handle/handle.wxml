@@ -1,0 +1,142 @@
+<view class="bg_for_handle"><image id="bg_img" src='https://i.loli.net/2019/03/10/5c8507c529aa7.png'></image></view>
+<view class="padding text-center">
+  <view id='bg_shadow' class="padding-xl radius shadow-warp bg-white margin-top">
+
+    <view class='bg-white padding'>
+      <view class='cu-steps'>
+        <view class='cu-item {{index>basics?"":"text-olive"}}' wx:for="{{basicsList}}" wx:key>
+          <text class='icon-{{item.icon}}'></text> {{item.name}}
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{basics==0}}">
+      <view class="cu-list menu sm-border ">
+
+        <view class="cu-item ">
+          <view class='content' id="content">
+            <text class='icon-locationfill text-grey'></text>
+            <text class='text-grey'>{{order.address}}</text>
+          </view>
+        </view>
+
+        <view class="cu-item ">
+          <view class='content' id="content">
+            <text class='icon-location text-grey'></text>
+            <text class='text-grey'>{{order.detailAddress}}</text>
+          </view>
+        </view>
+
+        <view class="cu-item ">
+          <view class='content' id="content">
+            <text class='icon-remind text-grey'></text>
+            <text class='text-grey'>{{order.start_date}}</text>
+          </view>
+        </view>
+
+        <view class="cu-item ">
+          <view class='content' id="content_detail">
+            <text class='icon-edit text-grey'></text>
+            <text class='text-grey'>{{order.detail}}</text>
+          </view>
+        </view>
+
+        <view class='padding' id="images">
+          <view id="pic">
+            <text class='icon-pic text-green'></text>
+          </view>
+          <text class='text-olive'>图片：</text>
+          <view wx:for="{{order.images}}" wx:key>
+            <view class="cu-avatar radius lg margin-left" bindtap='handleImagePreview' data-idx="{{index}}" style="background-image:url({{order.local_path+item}});"></view>
+          </view>
+        </view>
+      </view>
+
+      <button class='cu-btn block bg-olive margin-tb-sm lg' bindtap='basicsSteps'>
+        <text class='icon-my '></text>确定处理</button>
+      <button class='cu-btn block bg-green margin-tb-sm lg' bindtap='save'>
+        <text class='icon-down '></text>保存</button>
+    </view>
+
+    <view wx:if="{{basics==1}}">
+
+      <view class='padding'>
+        <view class='content'>
+          <text class='text-grey'>请联系维修部门处理故障设施</text>
+        </view>
+        <view class='margin-tb-sm text-center'>
+          <button class='cu-btn round lg line-green shadow' bindtap='connectFix'>
+            <text id='phone' class='icon-dianhua text-green'></text>联系维修部门</button>
+        </view>
+      </view>
+      <view class='two_button'>
+        <button class='cu-btn block bg-olive margin-tb-sm lg' bindtap='basicsBack'>
+          <text class='icon-pullleft' id='phone'></text> 返回上一步</button>
+        <button class='cu-btn block bg-olive margin-tb-sm lg' id="two_button_right" bindtap='basicsSteps'>
+          已联系
+          <text class='icon-forward' id='phone'></text> </button>
+      </view>
+      <button class='cu-btn block bg-green margin-tb-sm lg' bindtap='save'>
+        <text class='icon-down '></text>保存</button>
+    </view>
+
+    <view wx:if="{{basics==2}}">
+      <view class='padding'>
+        <view class='content'>
+          <text class='text-grey'>若确认设施已修复，请完结该申请</text>
+        </view>
+      </view>
+      <view class='two_button'>
+        <button class='cu-btn block bg-olive margin-tb-sm lg' bindtap='basicsBack'>
+          <text class='icon-pullleft ' id="phone"></text> 返回上一步</button>
+        <button class='cu-btn block bg-olive margin-tb-sm lg' id="two_button_right" bindtap='basicsSteps' >
+          完成
+          <text class='icon-emoji ' id="phone"></text> </button>
+      </view>
+      <button class='cu-btn block bg-green margin-tb-sm lg' bindtap='save'>
+        <text class='icon-down '></text>保存</button>
+    </view>
+
+    <view wx:if="{{basics==3}}">
+      <view class='padding'></view>
+      <view class='padding'>
+        <view class='content' id='over_text'>
+          <text class='text-olive'>
+          <text class='icon-favor '></text><text class='icon-favor '></text><text class='icon-favor '></text> 该申请已完结！<text class='icon-favor '></text><text class='icon-favor '></text><text class='icon-favor '></text>
+          </text>
+        </view>
+      </view>
+      <view class='padding'></view>
+      <button class='cu-btn block bg-green margin-tb-sm lg' bindtap="showModal" data-target="DialogModal1">
+        <text class='icon-safe'></text>确认</button>
+      <button class='cu-btn block bg-olive margin-tb-sm lg' bindtap='basicsBack'>
+        <text class='icon-pullleft ' id="phone"></text> 返回上一步</button>
+    </view>
+
+
+    <view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+      <view class="cu-dialog">
+        <view class="cu-bar bg-white justify-end">
+          <view class='content'><text style='font-size:50rpx' class='icon-infofill text-orange'></text></view>
+          <view class='action' bindtap='hideModal'>
+            <text class='icon-close text-red'></text>
+          </view>
+        </view>
+        <view class='padding-xl' style='font-size:33rpx'>
+          是否确认完结该申请？
+        </view>
+        <view class="cu-bar bg-white justify-end">
+          <view class='action'>
+            <button class='cu-btn line-green text-green' bindtap='hideModal'>取消</button>
+            <button class='cu-btn bg-green margin-left' bindtap='hideModal' bindtap='over'>确定</button>
+
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+
+
+  </view>
+</view>

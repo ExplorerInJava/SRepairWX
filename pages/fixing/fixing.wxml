@@ -1,0 +1,98 @@
+<scroll-view scroll-x class="bg-gradual-green nav text-center">
+  <view class="cu-item {{0==TabCur?'text-white cur':''}}" bindtap='tabSelect' data-id="0">
+    <text class='icon-radiobox'></text> 待联系
+  </view>
+  <view class="cu-item {{1==TabCur?'text-white cur':''}}" bindtap='tabSelect' data-id="1">
+    <text class='icon-repair'></text> 待维修
+  </view>
+  <view class="cu-item {{2==TabCur?'text-white cur':''}}" bindtap='tabSelect' data-id="2">
+    <text class='icon-roundcheck'></text> 待结单
+  </view>
+</scroll-view>
+
+<view wx:if="{{0==TabCur}}">
+  <view class="cu-card case ">
+    <view wx:for="{{orderList}}" wx:key class="cu-item shadow">
+      <view class='image'>
+        <image src="{{item.local_path+item.images[0]}}" mode="aspectFill"></image>
+        <view id="toBeFix" class="cu-tag bg-brown"> 待联系</view>
+        <view id="top_bar" class='cu-bar bg-shadeTop'> 提交于：{{item.start_date}}</view>
+        <view class='cu-bar bg-shadeBottom'>{{item.address}}</view>
+      </view>
+
+      <view class="cu-list menu menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url({{item.user.avatarUrl}});"></view>
+          <view id="cu_bottom" class='content flex-sub'>
+            <view id='cu_bottom_name' class='text-grey'>{{item.user.nickName}}</view>
+            <view class='text-gray text-sm flex justify-between'>
+              <view id='cu_bottom_settle' class='margin-tb-sm text-center'>
+                <button class='cu-btn round bg-brown' data-idx="{{index}}" bindtap='jump'>去处理
+                  <text id='cu_bottom_settle_icon' class='icon-right text-white'></text>
+                </button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{1==TabCur}}">
+  <view class="cu-card case ">
+    <view wx:for="{{orderList}}" wx:key class="cu-item shadow">
+      <view class='image'>
+        <image src="{{item.local_path+item.images[0]}}" mode="aspectFill"></image>
+        <view id="toBeFix" class="cu-tag bg-olive"> 待维修</view>
+        <view id="top_bar" class='cu-bar bg-shadeTop'> 提交于：{{item.start_date}}</view>
+        <view class='cu-bar bg-shadeBottom'>{{item.address}}</view>
+      </view>
+
+      <view class="cu-list menu menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url({{item.user.avatarUrl}});"></view>
+          <view id="cu_bottom" class='content flex-sub'>
+            <view id='cu_bottom_name' class='text-grey'>{{item.user.nickName}}</view>
+            <view class='text-gray text-sm flex justify-between'>
+              <view id='cu_bottom_settle' class='margin-tb-sm text-center'>
+                <button class='cu-btn round bg-olive' data-idx="{{index}}" bindtap='jump'>去处理
+                  <text id='cu_bottom_settle_icon' class='icon-right text-white'></text>
+                </button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{2==TabCur}}">
+  <view class="cu-card case">
+    <view wx:for="{{orderList}}" wx:key class="cu-item shadow">
+      <view class='image'>
+        <image src="{{item.local_path+item.images[0]}}" mode="aspectFill"></image>
+        <view id="toBeFix" class="cu-tag bg-green"> 待结单</view>
+        <view id="top_bar" class='cu-bar bg-shadeTop'> 提交于：{{item.start_date}}</view>
+        <view class='cu-bar bg-shadeBottom'>{{item.address}}</view>
+      </view>
+
+      <view class="cu-list menu menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url({{item.user.avatarUrl}});"></view>
+          <view id="cu_bottom" class='content flex-sub'>
+            <view id='cu_bottom_name' class='text-grey'>{{item.user.nickName}}</view>
+            <view class='text-gray text-sm flex justify-between'>
+              <view id='cu_bottom_settle' class='margin-tb-sm text-center'>
+                <button class='cu-btn round bg-green' data-idx="{{index}}" bindtap='jump'>去处理
+                  <text id='cu_bottom_settle_icon' class='icon-right text-white'></text>
+                </button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

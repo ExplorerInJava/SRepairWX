@@ -1,0 +1,102 @@
+/* pages/login/login.wxss */
+
+.title {
+  margin-top: 170rpx;
+  text-align: center;
+}
+
+.title_font {
+  color: rgb(199, 190, 166);
+  font-size: 70rpx;
+  font-weight: 700;
+  text-shadow: 0rpx 0rpx 3rpx rgb(158, 184, 169);
+}
+
+.form{
+  margin-top: 150rpx;
+  text-align: center;
+  font-size: 40rpx;
+}
+
+.input_1{
+  margin-top: 80rpx;
+  margin-left: 80rpx;
+  width: 580rpx;
+  display: flex;
+  flex-flow: row;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid rgb(202, 188, 188);
+}
+
+#input_1{
+  text-align: center;
+}
+
+.input_1_icon{
+  font-size: 50rpx;
+  color: rgb(228, 214, 214); 
+  margin-right: 40rpx;
+
+}
+
+.input_1 input{
+  text-align: left;
+  font-size: 30rpx;
+  margin-bottom: -5rpx;
+}
+
+.input_1 #input_1{
+  text-align: center;
+  width: 500rpx;
+}
+
+.placeholderStyle{
+  color: rgb(192, 192, 192);
+  margin-left: 10rpx;
+}
+
+.placeholderStyle2{
+  color: rgb(94, 94, 94);
+  margin-left: 50rpx
+}
+
+
+#account_input{
+  width: 200rpx;
+}
+
+.padding{
+  margin-top: 30rpx;
+}
+
+.cu-btn block line-blue margin-tb-sm lg{
+  background-color: rgb(255, 255, 255);
+  border:none;
+  color: #00CD66;
+  z-index: 999;
+}
+
+.login_img{
+  width: 600rpx;
+  height: 400rpx;
+  margin-left: 60rpx;
+  margin-top: -30rpx;
+}
+
+.sign_{
+  display: flex;
+  flex-flow: row;
+  float: right;
+  margin-top: -30rpx;
+  margin-right: 70rpx;
+}
+
+.info_{
+  color: rgb(110, 108, 103);
+  font-size: 28rpx;
+}
+
+.url_ {
+  color: rgb(104, 104, 212);
+  font-size: 28rpx;
+}

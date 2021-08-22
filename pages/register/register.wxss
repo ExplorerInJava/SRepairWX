@@ -1,0 +1,69 @@
+/* pages/login/login.wxss */
+
+.title {
+  margin-top: 120rpx;
+  text-align: center;
+}
+
+.title_font {
+  color: #4EEE94;
+  font-size: 70rpx;
+  font-weight: 700;
+  text-shadow: 0rpx 0rpx 3rpx #4EEE94
+}
+
+.form{
+  margin-top: 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+}
+
+.input_1{
+  margin-top: 50rpx;
+  margin-left: 80rpx;
+  width: 580rpx;
+  display: flex;
+  flex-flow: row;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid rgb(202, 188, 188);
+}
+
+#account_input{
+  width: 200rpx;
+}
+
+.input_1_icon{
+  font-size: 50rpx;
+  color: rgb(228, 214, 214); 
+  margin-right: 40rpx;
+
+}
+
+.input_1 input{
+  text-align: left;
+  font-size: 30rpx;
+  margin-bottom: -5rpx;
+}
+
+.placeholderStyle{
+  color: rgb(202, 188, 188);
+  margin-left: 10rpx;
+}
+
+.padding{
+  margin-top: 0rpx;
+}
+
+.cu-btn block line-blue margin-tb-sm lg{
+  background-color: rgb(255, 255, 255);
+  border:none;
+  color: #00CD66;
+  z-index: 999;
+}
+
+.login_img{
+  width: 600rpx;
+  height: 400rpx;
+  margin-left: 60rpx;
+  margin-top: -30rpx;
+}

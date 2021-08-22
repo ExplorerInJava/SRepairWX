@@ -1,0 +1,41 @@
+<view class="padding text-center">
+  <view class="padding-xl radius shadow-warp bg-white margin-top text-lg ">生产厂家</view>
+</view>
+
+
+<view class="cu-form-group">
+  <view class='title'>生产工厂名</view>
+  <input placeholder="平安制药一厂" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>发货人</view>
+  <input placeholder="小李" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>批次</view>
+  <input placeholder="P12" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>保质期</view>
+  <input placeholder="12个月" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>质检员</view>
+  <input placeholder="小王" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>药品编号</view>
+  <input placeholder="ID123" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>出厂日期</view>
+  <input placeholder="2018-12-23" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>药品名称</view>
+  <input placeholder="完达美" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>存储条件</view>
+  <input placeholder="阴凉干燥处" class='radius' name='input'></input>
+</view>

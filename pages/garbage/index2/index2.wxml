@@ -1,0 +1,38 @@
+<view class="padding text-center">
+  <view class="padding-xl radius shadow-warp bg-white margin-top text-lg ">物流公司</view>
+</view>
+
+
+<view class="cu-form-group">
+  <view class='title'>物流公司名称</view>
+  <input placeholder="达通" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>运输负责人</view>
+  <input placeholder="小明" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>起始地</view>
+  <input placeholder="河北" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>目的地</view>
+  <input placeholder="南京" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>耗时</view>
+  <input placeholder="12小时" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>车牌号</view>
+  <input placeholder="翼Axxxx" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>生产工厂名</view>
+  <input placeholder="平安制药一厂" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>药品编号</view>
+  <input placeholder="ID123" class='radius' name='input'></input>
+</view>
+

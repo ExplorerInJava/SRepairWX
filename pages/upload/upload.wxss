@@ -1,0 +1,59 @@
+page {
+  background-color: #f2f2f2;
+}
+
+#modal{
+  z-index: 9999
+}
+
+.bg_imge{
+  background-image: url('https://i.loli.net/2019/03/16/5c8ca21e7065e.jpg');
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-size: 100% 100%;
+  z-index: -999;
+}
+
+#image{
+  width: 220rpx;
+  height: 220rpx;
+}
+
+#firstInput{
+  margin-top: 70rpx;
+  padding-top: 20rpx;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  box-shadow: 0 -4rpx 6rpx rgb(218, 216, 216);
+}
+
+#textArea{
+  margin: 0rpx;
+  padding-bottom: 20rpx;
+  border-bottom-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  box-shadow: 0 5rpx 8rpx rgb(218, 216, 216);
+  border-bottom: 1rpx solid rgb(231, 225, 225);
+}
+
+#textAreaaa{
+  margin: 0rpx;
+  padding-bottom: 20rpx;
+}
+
+.img_counter{
+  margin-left:80rpx;
+  color: rgb(71, 112, 71);
+}
+
+#image_choose{
+  margin-top: 2rpx;
+  color:rgb(113, 190, 106);
+}
+
+#detail_add{
+  margin-bottom: 1rpx;
+  border-bottom: 1rpx solid rgb(238, 231, 231);
+  color: rgb(113, 190, 106);
+}

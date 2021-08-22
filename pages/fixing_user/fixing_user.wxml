@@ -1,0 +1,16 @@
+<view class="cu-card case {{isCard?'no-card':''}}">
+  <view wx:for="{{orderList}}" wx:key class="cu-item shadow">
+
+    <view class='image'>
+      <image src="{{item.local_path+item.images[0]}}" mode="aspectFill"></image>
+      <view id="toBeFix" class="cu-tag bg-orange" wx:if="{{item.status ==0}}">待处理</view>
+      <view id="toBeFix" class="cu-tag bg-brown" wx:if="{{item.status==1}}"> 待联系</view>
+      <view id="toBeFix" class="cu-tag bg-olive" wx:if="{{item.status==2}}"> 待维修</view>
+      <view id="toBeFix" class="cu-tag bg-green" wx:if="{{item.status==3}}"> 待结单</view>
+      <view id="top_bar" class='cu-bar bg-shadeTop'>提交于：{{item.start_date}}</view>
+      <view class='cu-bar bg-shadeBottom'>{{item.address}}</view>
+    </view>
+    
+
+  </view>
+</view>

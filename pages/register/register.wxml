@@ -1,0 +1,67 @@
+<!--pages/login/login.wxml-->
+<view class="title">
+  <view class="title_font">
+    <text>S.Repair</text>
+  </view>
+</view>
+
+<view class="form">
+  <form bindsubmit="formSubmit">
+    <!-- 账号input -->
+    <view class='input_1'>
+      <view class='input_1_icon'>
+        <text class='icon-profile lg text-gray'></text>
+      </view>
+
+      <input name="name" placeholder='请输入数字账号(8~10位)' type='number' maxlength="10" value='{{form.name}}' placeholder-class="placeholderStyle" bindinput='keyInput1' bindblur='onbluer'></input>
+      <view id="account_input" class='cu-tag bg-red radius' wx:if="{{isExist}}">账号已被注册</view>
+    </view>
+
+    <!-- 密码imput -->
+    <view class='input_1'>
+      <view class='input_1_icon'>
+        <text class='icon-lock lg text-gray'></text>
+      </view>
+
+      <input style='width:450rpx;' name="password" password='true' maxlength="8" value='{{form.password}}' placeholder='请输入密码(6~8位)' bindinput='keyInput2' placeholder-class="placeholderStyle"></input>
+    </view>
+
+    <!-- 确认密码input -->
+    <view class='input_1'>
+      <view class='input_1_icon'>
+        <text class='icon-keyboard lg text-gray'></text>
+      </view>
+
+      <input name="password2" password='true' maxlength="8" value="{{form.password2}}" placeholder='请输入确认密码' bindinput='keyInput3' placeholder-class="placeholderStyle"></input>
+    </view>
+
+    <!-- 手机号码input -->
+    <view class='input_1'>
+      <view class='input_1_icon'>
+        <text class='icon-phone lg text-gray'></text>
+      </view>
+
+      <input name="phone" placeholder='请输入手机号码' maxlength="11" value='{{form.phone}}' placeholder-class="placeholderStyle" bindinput='keyInput4'></input>
+    </view>
+
+
+    <!-- 两个登录button相互切换 -->
+    <view class="padding" wx:if="{{!couldLogin}}">
+      <button class='cu-btn block line-blue margin-tb-sm lg' disabled>注册</button>
+    </view>
+
+    <view class="padding" wx:if="{{couldLogin}}">
+      <button form-type='submit' class='cu-btn block line-blue margin-tb-sm lg' style='background-color:#00CD66; border:none; color:rgb(255, 255, 255)'>注册</button>
+    </view>
+
+  </form>
+</view>
+
+<!-- <view class='sign_'>
+  <text class="info_">还没有账号?</text>
+  <navigator class='url_'  url='../register/register'>立即注册</navigator>
+</view> -->
+
+<view class='login_'>
+  <image src='/images/world.png' class='login_img'></image>
+</view>

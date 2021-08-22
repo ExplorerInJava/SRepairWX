@@ -1,0 +1,44 @@
+<view class="padding text-center">
+  <view class="padding-xl radius shadow-warp bg-white margin-top text-lg ">销售端</view>
+</view>
+
+
+<view class="cu-form-group">
+  <view class='title'>药品名称</view>
+  <input placeholder="完达美" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>药店名·</view>
+  <input placeholder="达仁堂" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>出售日期</view>
+  <input placeholder="2019-01-20" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>药品编号</view>
+  <input placeholder="ID123" class='radius' name='input'></input>
+</view>
+
+<view class="cu-form-group">
+  <view class='title'>销售者</view>
+  <input placeholder="小红" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>物流公司名称</view>
+  <input placeholder="达通" class='radius' name='input'></input>
+</view>
+
+<view class="cu-form-group">
+  <view class='title'>溯源码</view>
+  <input placeholder="123456" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>价格</view>
+  <input placeholder="23元" class='radius' name='input'></input>
+</view>
+<view class="cu-form-group">
+  <view class='title'>地址</view>
+  <input placeholder="南京中山路xx号" class='radius' name='input'></input>
+</view>
+

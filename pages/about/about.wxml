@@ -1,0 +1,17 @@
+<!-- <view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed bg-gradual-green" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'></text> 关于
+    </navigator>
+  </view>
+</view> -->
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于SRepair</view>
+  <view class='text-content'>
+    <view id="title" >Hi！您好~欢迎使用SRepair！</view>
+    <view id="text" class='margin-top-sm'>该项目的产生是为了给所有在校师生提供便利的器材报修服务,当我们遇到器材故障时,很多情况下我们在校园内遇到了设备故障,但却经常因为找不到合适的上报途径而不了了之,设备的维护就需要很长的时间。</view>
+    <view id="text" class='margin-top-sm'>使用本小程序，就可以在任何时间、任何地点、快捷便利的对所遇到的设备故障进行上报和处理，及时的维护损坏设备，提升校园生活幸福感。</view>
+    <view id="title" class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>

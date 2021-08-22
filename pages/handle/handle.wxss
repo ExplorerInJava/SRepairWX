@@ -1,0 +1,54 @@
+.bg_for_handle{
+  position: absolute;
+  bottom: 0rpx;
+
+}
+
+#bg_img{
+  width:750rpx;
+}
+
+
+#bg_shadow{
+  border-radius: 5rpx;
+}
+
+#content{
+  text-align: left;
+}
+
+#content_detail{
+  text-align: left;
+  margin-top: 24rpx;
+}
+
+#pic{
+  font-size: 35rpx;
+  margin-top: 1rpx;
+  margin-right: 10rpx;
+}
+
+#images{
+  display: flex;
+  flex-flow: row;
+  border-bottom: 1rpx solid rgb(236, 225, 225);
+
+}
+
+.two_button{
+  display: flex;
+  flex-flow: row;
+}
+
+#two_button_right{
+  position: absolute;
+  right: 50rpx;
+}
+
+#phone{
+  font-size: 40rpx;
+}
+
+#over_text{
+  font-size: 33rpx;
+}

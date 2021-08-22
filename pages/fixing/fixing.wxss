@@ -1,0 +1,36 @@
+#top_bar{
+  position: absolute;
+  padding-top: 0rpx;
+  top: 0rpx;
+  height: 50rpx;
+  width: 85%;
+  color: rgb(253, 253, 253);
+  font-size: 30rpx;
+}
+
+#toBeFix{
+  height:88rpx;
+  font-size: 25rpx;
+}
+
+#cu_bottom{
+  display: flex;
+  flex-flow: row;
+}
+
+#cu_bottom_name{
+  top: 20rpx;
+  left: 20rpx;
+}
+
+#cu_bottom_settle{
+  position: absolute;
+  right: 40rpx;
+  bottom: 15rpx;
+}
+
+#cu_bottom_settle_icon{
+  font-size: 35rpx;
+  line-height: 10rpx;
+  line-break: 7rpx;
+}

@@ -1,0 +1,52 @@
+<!--pages/login/login.wxml-->
+<view class="title">
+  <view class="title_font">
+    <text >S.Repair</text>
+  </view>
+</view>
+
+<view class="form">
+<form bindsubmit="formSubmit">
+  <view class='input_1'>
+    <view class='input_1_icon'>
+      <text class='icon-profile lg text-gray'></text>
+    </view>
+
+    <input name="name" placeholder='请输入账号' maxlength="10" value='{{form.name}}'  placeholder-class="placeholderStyle" bindinput='keyInput1'></input>
+  </view>
+
+  <view class='input_1'>
+    <view class='input_1_icon'>
+      <text class='icon-lock lg text-gray'></text>
+    </view>
+
+    <input name="password" password='true' maxlength="8" value='{{form.password}}'  placeholder='请输入密码' bindinput='keyInput2'  placeholder-class="placeholderStyle"></input>
+  </view>
+
+<view class="padding" wx:if="{{!couldLogin}}">
+  <button class='cu-btn block line-blue margin-tb-sm lg' disabled>登录</button>
+</view>
+
+<view class="padding" wx:if="{{couldLogin}}">
+  <button form-type='submit' class='cu-btn block line-blue margin-tb-sm lg' style='background-color:#00CD66; border:none; color:rgb(255, 255, 255)'>登录</button>
+</view>
+
+</form>
+</view>
+
+<view class='sign_1'>
+  <text class="info_1"></text>
+  <navigator class='url_1'  url='../inputAccount/inputAccount'>忘记密码</navigator>
+</view>
+
+<view class='sign_'>
+  <text class="info_">还没有账号?</text>
+  <navigator class='url_'  url='../register/register'>立即注册</navigator>
+</view>
+
+<view class='login_'>
+  <image src='/images/world.png' class='login_img'></image>
+</view>
+
+
+

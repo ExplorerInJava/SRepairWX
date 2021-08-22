@@ -1,0 +1,40 @@
+<!--pages/login/login.wxml-->
+<view class="title">
+  <view class="title_font">
+    <text >密码找回</text>
+  </view>
+</view>
+
+<view class="form">
+<form bindsubmit="formSubmit">
+  <!-- <view class='input_1'>
+
+    <input name="name" id="input_1" placeholder='请输入您的账号' disabled='true' maxlength="12"   placeholder-class="placeholderStyle2" bindinput='keyInput1'></input>
+  </view> -->
+
+  <view class='input_1'>
+    <view class='input_1_icon'>
+      <text class='icon-profile lg text-gray'></text>
+    </view>
+
+    <input name="password" maxlength="12" value='{{form.password}}'  placeholder='请输入账号' bindinput='keyInput1' bindblur='onbluer'  placeholder-class="placeholderStyle"></input>
+    <view id="account_input" class='cu-tag bg-red radius'  wx:if="{{!isExist}}">账号不存在</view>
+  </view>
+
+<view class="padding" wx:if="{{!couldLogin}}">
+  <button class='cu-btn block line-blue margin-tb-sm lg' disabled>确认</button>
+</view>
+
+<view class="padding" wx:if="{{couldLogin}}">
+  <button form-type='submit' class='cu-btn block line-blue margin-tb-sm lg' style='background-color:#00CD66; border:none; color:rgb(255, 255, 255)'>确认</button>
+</view>
+
+</form>
+</view>
+
+<view class='login_'>
+  <image src='/images/world.png' class='login_img'></image>
+</view>
+
+
+

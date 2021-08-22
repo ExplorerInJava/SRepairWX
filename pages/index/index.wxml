@@ -1,0 +1,78 @@
+<view wx:if="{{!isAdmin}}">
+  <view class='swip'>
+    <swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="green">
+      <swiper-item wx:for="{{tower}}" wx:key class="{{cardCur==index?'cur':''}}">
+        <view class='bg-img shadow-blur' style="background-image:url({{item.url}})"></view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="cu-bar bg-white margin-top" id="info">
+    <view class='action'>
+      <text class='icon-title text-green'></text> 校园故障维修
+    </view>
+  </view>
+
+  <view>
+    <image class='bg-image' src='/images/math.png'></image>
+  </view>
+
+  <view class="padding-sm">
+    <view class='flex flex-wrap justify-around'>
+      <button bindtap='showModal' data-target="Image" id="upload" class=' bg-{{item.color}} cu-btn {{toggleDelay?"animation-slide-bottom":""}} margin-sm  shadow' style='animation-delay: {{(index+2)*0.1}}s;' wx:for="{{list}}" wx:key="">立即报修</button>
+    </view>
+  </view>
+
+  <!-- 报修提示model -->
+  <view class="cu-modal {{modalName=='Image'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="bg-img" style="background-image: url('https://i.loli.net/2019/04/20/5cba8fd7248b8.jpg');height:200px;">
+        <view class="cu-bar justify-end text-white">
+          <view class='action' bindtap='hideModal' data-target="reject">
+            <text class='icon-close '></text>
+          </view>
+        </view>
+      </view>
+      <view class="cu-bar bg-white">
+        <view class='action margin-0 flex-sub  solid-left' bindtap='hideModal'>我会的，去提交~</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-sm">
+    <view class='flex flex-wrap justify-around'>
+      <button bindtap='connectAdmin' id="connect" class=' bg-{{item.color}} cu-btn {{toggleDelay?"animation-slide-bottom":""}} margin-sm  shadow' style='animation-delay: {{(index+2)*0.1}}s;' wx:for="{{list2}}">联系管理员</button>
+    </view>
+  </view>
+
+</view>
+
+<view wx:if="{{isAdmin}}">
+
+  <view class="cu-card case {{isCard?'no-card':''}}">
+    <view wx:for="{{orderList}}" wx:key class="cu-item shadow">
+
+      <view class='image'>
+        <image src="{{item.local_path+item.images[0]}}" mode="aspectFill"></image>
+        <view id="toBeFix" class="cu-tag bg-orange">待处理</view>
+        <view id="top_bar" class='cu-bar bg-shadeTop'>提交于：{{item.start_date}}</view>
+        <view class='cu-bar bg-shadeBottom'>{{item.address}}</view>
+      </view>
+      <view class="cu-list menu menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url({{item.user.avatarUrl}});"></view>
+          <view id="cu_bottom" class='content flex-sub'>
+            <view id='cu_bottom_name' class='text-grey'>{{item.user.nickName}}</view>
+            <view class='text-gray text-sm flex justify-between'>
+              <view id='cu_bottom_settle' class='margin-tb-sm text-center' >
+                <button  class='cu-btn round bg-orange' data-idx="{{index}}" bindtap='jump'>去处理<text id='cu_bottom_settle_icon' class='icon-right text-white'></text></button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+</view>

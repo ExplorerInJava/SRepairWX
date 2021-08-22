@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/garbage/index3/index3",
+    "pages/garbage/index2/index2",
+    "pages/garbage/index1/index1",
+    "pages/index/index",
+    "pages/upload/upload",
+    "pages/my/my",
+    "pages/about/about",
+    "pages/changePassword/changePassword",
+    "pages/passwordQuestion/passwordQuestion",
+    "pages/findPassword/findpassword",
+    "pages/inputAccount/inputAccount",
+    "pages/fixing/fixing",
+    "pages/fixing_user/fixing_user",
+    "pages/fixed_user/fixed_user",
+    "pages/fixed/fixed",
+    "pages/register/register",
+    "pages/handle/handle",
+    "pages/auth/auth",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#7bdf7b",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#aaa",
+    "selectedColor": "#39b54a",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/tabbar/plugin.png",
+        "selectedIconPath": "/images/tabbar/plugin_cur.png",
+        "text": "报修"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "/images/tabbar/about.png",
+        "selectedIconPath": "/images/tabbar/about_cur.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

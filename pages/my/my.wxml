@@ -1,0 +1,200 @@
+<!-- 普通用户界面 -->
+<view wx:if="{{!isAdmin}}">
+  <view class='UCenter-bg'>
+    <view class='padding'>
+      <view id='head_img' class="cu-avatar round lg margin-left" style="background-image:url({{userInfo.avatarUrl}});">
+        <view id="head_img_icon" class="cu-tag badge {{userInfo.gender!=1?'icon-female bg-pink':'icon-male bg-blue'}}"></view>
+      </view>
+    </view>
+    <view id='user_name' class='text-xl'>{{userInfo.nickName}}</view>
+    <view id='phone_number' class='margin-top-sm'>
+      <text><text id="phone_icon" class='icon-mobile lg text-white'></text>13253531214</text>
+    </view>
+    <image src='https://image.weilanwl.com/gif/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+  </view>
+
+  <view class='padding flex text-center text-grey bg-white shadow-warp'>
+    <view class='flex flex-sub flex-direction solid-right'>
+      <view class="text-xxl text-orange">{{all}}</view>
+      <view class="margin-top-sm">
+        <text class='icon-selectionfill'></text>报修数</view>
+    </view>
+
+    <view class='flex flex-sub flex-direction solid-right'>
+      <view class="text-xxl text-blue">{{fixing}}</view>
+      <view class="margin-top-sm">
+        <text class='icon-repairfill'></text>处理中</view>
+    </view>
+
+    <view class='flex flex-sub flex-direction'>
+      <view class="text-xxl text-green">{{fixed}}</view>
+      <view class="margin-top-sm">
+        <text class='icon-favorfill'></text>已处理</view>
+    </view>
+
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+    <!-- <view class="cu-item arrow">copy 内容专用
+    <view class='content' bindtap='CopyLink' data-link='https://github.com/weilanwl/ColorUI'>
+      <text class='icon-github text-grey'></text>
+      <text class='text-grey'>GitHub</text>
+    </view>
+  </view> -->
+
+    <view class="cu-item arrow">
+      <navigator class='content' url='../fixed_user/fixed_user' hover-class='none'>
+        <image src='/images/iron.png' class='png' mode='aspectFit'></image>
+        <text class='text-grey'>已处理请求</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class='content' url='../fixing_user/fixing_user' hover-class='none'>
+        <text class='icon-formfill text-green'></text>
+        <text class='text-grey'>待处理请求</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <view class='content' bindtap="showQrcode">
+        <text class='icon-appreciatefill text-red'></text>
+        <text class='text-grey'>分享小程序</text>
+      </view>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class='content' url='../changePassword/changePassword' hover-class='none'>
+        <button class='cu-btn content'>
+          <text class='icon-writefill text-cyan'></text>
+          <text class='text-grey'>修改密码</text>
+        </button>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <button class='cu-btn content' open-type='feedback'>
+        <text class='icon-commentfill text-cyan'></text>
+        <text class='text-grey'>意见反馈</text>
+      </button>
+    </view>
+
+    <view class="cu-item arrow">
+      <view class='content' bindtap='loginOut'>
+        <text class='icon-weixin text-green'></text>
+        <text class='text-grey'>注销登录</text>
+      </view>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class='content' url='../about/about' hover-class='none'>
+        <text class='icon-creativefill text-orange'></text>
+        <text class='text-grey'>关于SERepair</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class='content' url='../passwordQuestion/passwordQuestion' hover-class='none'>
+        <button class='cu-btn content'>
+          <text class='icon-questionfill text-mauve'></text>
+          <text class='text-grey'>设置密保问题</text>
+        </button>
+      </navigator>
+    </view>
+
+  </view>
+
+
+  <view class='cu-tabbar-height'></view>
+</view>
+
+
+<!-- 管理员界面 -->
+<view wx:if="{{isAdmin}}">
+  <view class='UCenter-bg'>
+    <view class='padding'>
+      <view id='head_img' class="cu-avatar round lg margin-left" style="background-image:url({{userInfo.avatarUrl}});">
+        <view id="head_img_icon" class="cu-tag badge {{userInfo.gender!=1?'icon-female bg-pink':'icon-male bg-blue'}}"></view>
+      </view>
+    </view>
+    <view id='user_name_admin' class='text-xl'>欢迎您，管理员{{userInfo.nickName}}！</view>
+    <view id='phone_number' class='margin-top-sm'>
+      <text><text id="phone_icon" class='icon-mobile lg text-white'></text>13253531214</text>
+    </view>
+    <image src='https://image.weilanwl.com/gif/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+  </view>
+
+  <view class='padding flex text-center text-grey bg-white shadow-warp'>
+
+    <view class='flex flex-sub flex-direction solid-right'>
+      <view class="text-xxl text-orange">{{all}}</view>
+      <view class="margin-top-sm">
+        <text class='icon-servicefill'></text>报修统计</view>
+    </view>
+
+    <view class='flex flex-sub flex-direction solid-right'>
+      <view class="text-xxl text-blue">{{fixing}}</view>
+      <view class="margin-top-sm">
+        <text class='icon-repairfill'></text>处理中</view>
+    </view>
+
+    <view class='flex flex-sub flex-direction'>
+      <view class="text-xxl text-green">{{fixed}}</view>
+      <view class="margin-top-sm">
+        <text class='icon-favorfill'></text>已处理</view>
+    </view>
+
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+    <!-- <view class="cu-item arrow">copy 内容专用
+    <view class='content' bindtap='CopyLink' data-link='https://github.com/weilanwl/ColorUI'>
+      <text class='icon-github text-grey'></text>
+      <text class='text-grey'>GitHub</text>
+    </view>
+  </view> -->
+
+    <view class="cu-item arrow">
+      <navigator class='content' url='../fixed/fixed' hover-class='none'>
+        <image src='/images/iron.png' class='png' mode='aspectFit'></image>
+        <text class='text-grey'>已处理请求</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class='content' url='../fixing/fixing' hover-class='none'>
+        <text class='icon-formfill text-olive'></text>
+        <text class='text-grey'>待处理请求</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <view class='content' bindtap="showQrcode">
+        <text class='icon-appreciatefill text-red'></text>
+        <text class='text-grey'>分享小程序</text>
+      </view>
+    </view>
+
+    <view class="cu-item arrow">
+      <button class='cu-btn content' open-type='feedback'>
+        <text class='icon-writefill text-cyan'></text>
+        <text class='text-grey'>意见反馈</text>
+      </button>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class='content' url='../about/about' hover-class='none'>
+        <text class='icon-creativefill text-orange'></text>
+        <text class='text-grey'>关于SERepair</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <view class='content' bindtap='loginOut'>
+        <text class='icon-weixin text-green'></text>
+        <text class='text-grey'>注销登录</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='cu-tabbar-height'></view>
+</view>
